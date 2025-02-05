@@ -1,0 +1,51 @@
+/* Fondo negro y centrado */
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen de la carta */
+#carta {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#carta:hover {
+    transform: scale(1.1);
+}
+
+/* Contenedor de botones */
+.buttons {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+/* Botón Sí */
+#yes {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Botón No */
+#no {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
