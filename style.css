@@ -52,7 +52,7 @@ button {
 /* Botón Sí - Fijo con efecto de ampliación */
 #yes {
     position: relative;
-    left: -20px;
+    left: -50px;
     transition: transform 0.3s;
 }
 
