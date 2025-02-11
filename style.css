@@ -32,7 +32,15 @@ body {
     position: relative;
 }
 
-/* Estilo general de los botones */
+.buttons {
+    width: 400px; /* Ajuste para centrar mejor */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
 button {
     background-color: beige;
     color: black;
@@ -41,15 +49,10 @@ button {
     border: 2px solid black;
     cursor: pointer;
     border-radius: 8px;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: background-color 0.2s;
 }
 
-/* Efecto al pasar el mouse */
-button:hover {
-    background-color: #e6d5b8;
-}
-
-/* Botón Sí - Se queda fijo */
+/* Botón Sí - Fijo y con efecto de ampliación */
 #yes {
     position: relative;
     transition: transform 0.3s;
@@ -59,8 +62,9 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Botón No - Se mueve */
+/* Botón No - Se mueve, pero no se sale del área */
 #no {
     position: absolute;
     right: 0;
+    transition: left 0.2s, top 0.2s; /* Suaviza el movimiento */
 }
