@@ -1,37 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     const noButton = document.getElementById("no");
-    const yesButton = document.getElementById("yes");
-    const bodyWidth = document.body.clientWidth;
-    const bodyHeight = document.body.clientHeight;
-
-    // Posicionar el "No" inicialmente a la derecha del "Sí"
-    const yesRect = yesButton.getBoundingClientRect();
-    noButton.style.position = "absolute";
-    noButton.style.left = `${yesRect.right + 30}px`; // Lo mueve a la derecha
-    noButton.style.top = `${yesRect.top}px`; // Alineado verticalmente
+    const buttonsContainer = document.querySelector(".buttons");
 
     noButton.addEventListener("mouseover", function () {
+        const containerRect = buttonsContainer.getBoundingClientRect();
         const buttonWidth = noButton.offsetWidth;
         const buttonHeight = noButton.offsetHeight;
 
-        let randomX, randomY;
-        let attempts = 0;
+        // Calcular nuevas coordenadas dentro del área visible del contenedor
+        let randomX = Math.random() * (containerRect.width - buttonWidth);
+        let randomY = Math.random() * (containerRect.height - buttonHeight);
 
-        do {
-            randomX = Math.random() * (bodyWidth - buttonWidth - 20);
-            randomY = Math.random() * (bodyHeight - buttonHeight - 20);
-            attempts++;
-        } while (
-            Math.abs(randomX - yesButton.offsetLeft) < 100 &&
-            Math.abs(randomY - yesButton.offsetTop) < 50 &&
-            attempts < 10
-        );
+        // Asegurar que el botón "No" no se desborde
+        randomX = Math.max(10, Math.min(randomX, containerRect.width - buttonWidth - 10));
+        randomY = Math.max(10, Math.min(randomY, containerRect.height - buttonHeight - 10));
 
-        // Asegurar que el botón "No" no salga de pantalla
-        randomX = Math.max(10, Math.min(randomX, bodyWidth - buttonWidth - 10));
-        randomY = Math.max(10, Math.min(randomY, bodyHeight - buttonHeight - 10));
-
-        noButton.style.left = `${Math.min(yesRect.right + 30, bodyWidth - noButton.offsetWidth - 10)}px`;
+        noButton.style.position = "absolute";
+        noButton.style.left = `${randomX}px`;
         noButton.style.top = `${randomY}px`;
     });
 });
