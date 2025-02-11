@@ -52,6 +52,7 @@ button {
 /* Botón Sí - Fijo con efecto de ampliación */
 #yes {
     position: relative;
+    left: -20px;
     transition: transform 0.3s;
 }
 
@@ -62,7 +63,7 @@ button {
 /* Botón No - Se mueve dentro de la pantalla */
 #no {
     position: absolute;
-    left: calc(50% + 70px); /* Lo mueve a la derecha del botón "Sí" */
+    left: calc(50% + 60px); /* Lo mueve a la derecha del botón "Sí" */
     top: 50%;
     transform: translateY(-50%);
 }
