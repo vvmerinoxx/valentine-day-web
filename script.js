@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const yesButton = document.getElementById("yes");
     const container = document.querySelector(".buttons");
 
+    noButton.style.position = "absolute"; // Asegura que se pueda mover
+
     noButton.addEventListener("mouseover", function() {
         const maxX = container.offsetWidth - noButton.offsetWidth;
         const maxY = container.offsetHeight - noButton.offsetHeight;
@@ -24,5 +26,3 @@ document.addEventListener("DOMContentLoaded", function() {
         noButton.style.top = `${randomY}px`;
     });
 });
-
-

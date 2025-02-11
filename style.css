@@ -22,34 +22,44 @@ body {
     transform: scale(1.1);
 }
 
+/* Contenedor de los botones */
 .buttons {
-    width: 500px; /* Ajusta según necesites */
+    width: 400px;
+    height: 100px;
     display: flex;
-    justify-content: space-between; /* Asegura que los botones estén separados */
+    justify-content: space-around; /* Separa los botones */
     align-items: center;
     position: relative;
 }
 
+/* Estilo general de los botones */
 button {
-    background-color: beige; /* Color de fondo */
-    color: black; /* Color del texto */
+    background-color: beige;
+    color: black;
     font-size: 20px;
     padding: 10px 20px;
-    border: 2px solid black; /* Borde negro */
+    border: 2px solid black;
     cursor: pointer;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px;
     transition: transform 0.2s, background-color 0.2s;
 }
 
+/* Efecto al pasar el mouse */
 button:hover {
-    background-color: #e6d5b8; /* Un tono un poco más oscuro al pasar el ratón */
-    transform: scale(1.1); /* Efecto de crecimiento suave */
+    background-color: #e6d5b8;
 }
 
+/* Botón Sí - Se queda fijo */
 #yes {
     position: relative;
+    transition: transform 0.3s;
 }
 
+#yes:hover {
+    transform: scale(1.1);
+}
+
+/* Botón No - Se mueve */
 #no {
     position: absolute;
     right: 0;
