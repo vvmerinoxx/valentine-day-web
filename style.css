@@ -1,4 +1,4 @@
-/* Fondo negro y centrado */
+/* Fondo negro y texto centrado */
 body {
     background-color: black;
     color: white;
@@ -11,32 +11,51 @@ body {
     justify-content: center;
 }
 
+/* Imagen de la carta */
+#carta {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#carta:hover {
+    transform: scale(1.1);
+}
+
+/* Contenedor de los botones */
 .buttons {
-    width: 100%;
-    height: 200px; 
+    width: 350px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-top: 20px;
 }
 
+/* Estilos generales de los botones */
+button {
+    background-color: beige;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Botón Sí - Fijo con efecto de ampliación */
 #yes {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
     position: relative;
+    transition: transform 0.3s;
 }
 
+#yes:hover {
+    transform: scale(1.1);
+}
+
+/* Botón No - Se mueve dentro de la pantalla */
 #no {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
     position: absolute;
+    transition: left 0.2s, top 0.2s;
 }
-
