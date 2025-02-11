@@ -35,6 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    gap: 50px;
 }
 
 /* Botones */
@@ -61,8 +62,6 @@ button {
 
 /* Botón No - Se mueve dentro de la pantalla */
 #no {
-    position: absolute;
-    left: 60%; /* Lo mueve a la derecha del "Sí" */
-    top: 50%;
-    transform: translateY(-50%); /* Centra verticalmente */
+    position: relative;
+    left: initial;
 }
