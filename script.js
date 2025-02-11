@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         randomX = Math.max(10, Math.min(randomX, bodyWidth - buttonWidth - 10));
         randomY = Math.max(10, Math.min(randomY, bodyHeight - buttonHeight - 10));
 
-        noButton.style.left = `${randomX}px`;
+        noButton.style.left = `${Math.min(yesRect.right + 30, bodyWidth - noButton.offsetWidth - 10)}px`;
         noButton.style.top = `${randomY}px`;
     });
 });
