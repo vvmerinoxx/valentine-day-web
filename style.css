@@ -23,31 +23,34 @@ body {
 }
 
 .buttons {
-    width: 100%;
-    height: 200px; 
+    width: 500px; /* Ajusta según necesites */
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Asegura que los botones estén separados */
     align-items: center;
     position: relative;
 }
 
-#yes {
-    background-color: green;
-    color: white;
+button {
+    background-color: beige; /* Color de fondo */
+    color: black; /* Color del texto */
     font-size: 20px;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid black; /* Borde negro */
     cursor: pointer;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #e6d5b8; /* Un tono un poco más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Efecto de crecimiento suave */
+}
+
+#yes {
     position: relative;
 }
 
 #no {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
     position: absolute;
+    right: 0;
 }
-
