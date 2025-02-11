@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let randomX = Math.random() * maxX;
         let randomY = Math.random() * maxY;
 
-        noButton.style.left = `${randomX}px`;
-        noButton.style.top = `${randomY}px`;
+        noButton.style.left = `${Math.max(10, Math.min(randomX, maxX))}px`;
+        noButton.style.top = `${Math.max(10, Math.min(randomY, maxY))}px`;
     });
 });
