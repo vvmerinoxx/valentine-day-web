@@ -62,5 +62,7 @@ button {
 /* Botón No - Se mueve dentro de la pantalla */
 #no {
     position: absolute;
-    left: initial;
+    left: 60%; /* Lo mueve a la derecha del "Sí" */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
 }
