@@ -11,36 +11,16 @@ body {
     justify-content: center;
 }
 
-/* Imagen de la carta */
-#carta {
-    width: 200px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-#carta:hover {
-    transform: scale(1.1);
-}
-
 /* Contenedor de los botones */
 .buttons {
     width: 400px;
-    height: 100px;
     display: flex;
-    justify-content: space-around; /* Separa los botones */
+    justify-content: space-between; /* Separa los botones */
     align-items: center;
     position: relative;
 }
 
-.buttons {
-    width: 400px; /* Ajuste para centrar mejor */
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
+/* Estilos de los botones */
 button {
     background-color: beige;
     color: black;
@@ -49,10 +29,10 @@ button {
     border: 2px solid black;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-/* Botón Sí - Fijo y con efecto de ampliación */
+/* Botón Sí - Fijo con efecto de ampliación */
 #yes {
     position: relative;
     transition: transform 0.3s;
@@ -62,9 +42,9 @@ button {
     transform: scale(1.1);
 }
 
-/* Botón No - Se mueve, pero no se sale del área */
+/* Botón No - Se mueve, pero siempre visible */
 #no {
     position: absolute;
     right: 0;
-    transition: left 0.2s, top 0.2s; /* Suaviza el movimiento */
+    transition: left 0.2s, top 0.2s;
 }
