@@ -28,12 +28,13 @@ body {
 
 /* Contenedor de los botones */
 .buttons {
-    width: 300px;
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-top: 20px;
 }
 
 /* Botones */
@@ -60,6 +61,6 @@ button {
 
 /* Botón No - Se mueve dentro de la pantalla */
 #no {
-    position: relative;
-    margin-left: 20px; /* Espacio entre el botón "Sí" y "No" */
+    position: absolute;
+    left: initial;
 }
