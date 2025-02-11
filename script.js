@@ -2,13 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const noButton = document.getElementById("no");
 
     noButton.addEventListener("mouseover", function() {
-        const maxX = window.innerWidth - noButton.offsetWidth - 20; // Evita que salga de la pantalla
-        const maxY = window.innerHeight - noButton.offsetHeight - 20;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
 
-        let randomX = Math.random() * maxX;
-        let randomY = Math.random() * maxY;
+        const buttonWidth = noButton.offsetWidth;
+        const buttonHeight = noButton.offsetHeight;
 
-        noButton.style.left = `${Math.max(10, Math.min(randomX, maxX))}px`;
-        noButton.style.top = `${Math.max(10, Math.min(randomY, maxY))}px`;
+        // Calculamos nuevas coordenadas dentro de los límites visibles
+        let randomX = Math.floor(Math.random() * (viewportWidth - buttonWidth - 20));
+        let randomY = Math.floor(Math.random() * (viewportHeight - buttonHeight - 20));
+
+        // Asegurar que el botón no salga de la pantalla
+        randomX = Math.max(10, randomX);
+        randomY = Math.max(10, randomY);
+
+        noButton.style.position = "absolute";
+        noButton.style.left = `${randomX}px`;
+        noButton.style.top = `${randomY}px`;
     });
 });
