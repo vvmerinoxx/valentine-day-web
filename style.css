@@ -35,7 +35,6 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    gap: 20px;
 }
 
 /* Botones */
@@ -63,5 +62,5 @@ button {
 /* Botón No - Se mueve dentro de la pantalla */
 #no {
     position: absolute;
-    left: 120px;
+    left: initial;
 }
