@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #mensaje {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #boton {
+            display: none;
+            background-color: beige;
+            color: black;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid black;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #imagen-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #imagen-container img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mensaje">Si has llegado aquí algo estaré haciendo bien :)</div>
+    <button id="boton">¡PÚLSAME!</button>
+
+    <div id="imagen-container">
+        <img src="nosotros.png" alt="Nosotros">
+        <p>Gracias...</p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("boton").style.display = "block";
+        }, 5000);
+
+        document.getElementById("boton").addEventListener("click", function() {
+            document.getElementById("imagen-container").style.display = "block";
+        });
+    </script>
+</body>
+</html>
