@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         img.style.top = "50%";
         img.style.left = "50%";
         img.style.transform = "translate(-50%, -50%)";
-        img.style.width = "500px"; // Ajusta el tamaño según necesites
+        img.style.width = "700px"; // Ajusta el tamaño según necesites
         img.style.zIndex = "1000"; // Asegura que se vea por encima de otros elementos
         document.body.appendChild(img);
     }

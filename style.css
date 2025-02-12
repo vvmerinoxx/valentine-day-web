@@ -21,10 +21,14 @@ body {
     max-width: 100%;
     cursor: pointer;
     transition: transform 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #carta:hover {
-    transform: scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* Contenedor de los botones */
