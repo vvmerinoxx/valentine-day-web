@@ -15,6 +15,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
         #mensaje {
             font-size: 24px;
@@ -32,13 +33,20 @@
             margin-top: 20px;
             transition: transform 0.3s;
         }
+        #boton:hover {
+            transform: scale(1.1); /* Se amplía como el botón SÍ */
+        }
         #imagen-container {
             display: none;
-            margin-top: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
+            z-index: 1000;
         }
         #imagen-container img {
-            width: 200px;
+            width: 500px; /* Se ajusta al tamaño similar a gato.png */
         }
     </style>
 </head>
@@ -53,9 +61,15 @@
     <script>
         setTimeout(function() {
             document.getElementById("boton").style.display = "block";
-        }, 5000);
+        }, 3000);
+        
         document.getElementById("boton").addEventListener("click", function() {
-            document.getElementById("imagen-container").style.display = "block";
+            const imagenContainer = document.getElementById("imagen-container");
+            imagenContainer.style.display = "block";
+            imagenContainer.style.position = "absolute";
+            imagenContainer.style.top = "50%";
+            imagenContainer.style.left = "50%";
+            imagenContainer.style.transform = "translate(-50%, -50%)";
         });
     </script>
 </body>
