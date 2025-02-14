@@ -58,6 +58,10 @@
         <p>Gracias por poner de tu parte 
         para formar el mejor equipo, te amo ❤️</p>
     </div>
+
+    <!-- 🎵 AUDIO -->
+    <audio id="musica" src="audio.mp3"></audio>
+
     <script>
         setTimeout(function() {
             document.getElementById("boton").style.display = "block";
@@ -70,6 +74,9 @@
             imagenContainer.style.top = "50%";
             imagenContainer.style.left = "50%";
             imagenContainer.style.transform = "translate(-50%, -50%)";
+
+            // Iniciar la música
+            document.getElementById("musica").play();
         });
     </script>
 </body>
